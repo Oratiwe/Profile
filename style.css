@@ -22,6 +22,8 @@
     max-height: 190px; /* Ensure the height doesn't exceed this */
   }
 
+  
+
   /* Additional styling for the navbar */
   .navbar .menu {
     display: flex;
@@ -109,9 +111,28 @@ a:hover {
 }
 
 /* HAMBURGER MENU */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+  background-color: rgb(84, 128, 138); /* Add this line to set the background color */
+}
+#experience
+{
+  
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+  background-color: rgb(84, 128, 138);
+}
+
+
+
 
 #hamburger-nav {
   display: none;
+ 
 }
 
 .hamburger-menu {
@@ -191,6 +212,7 @@ a:hover {
 /* SECTIONS */
 
 section {
+  
   padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
@@ -229,11 +251,13 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  color: wheat;
 }
 
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  color: wheat;
 }
 
 .title {
@@ -424,43 +448,193 @@ article .icon {
 
 /* CONTACT */
 
+/* Contact form container */
+/* Centering everything */
 #contact {
-  display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(84, 128, 138);
+}
+#contact{
   justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+  background-color: rgb(84, 128, 138);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: rgb(37, 37, 37);
+}
+
+/* Styling input fields */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styling the labels */
+label {
+    font-weight: bold;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Specific label font size increase */
+label[for="fname"] {
+    font-size: 1.4em;
+}
+
+label[for="lname"], label[for="email"], label[for="phone"], label[for="message"] {
+    font-size: 1.4em;
+}
+/* Form styling */
+form {
+  display: flex;
   flex-direction: column;
-  height: 70vh;
+  align-items: center; /* Center the form fields */
+  width: 100%; /* Ensure form takes up full width */
 }
 
-.contact-info-upper-container {
+.form-group {
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
-}
-
-.contact-info-container {
-  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  flex-wrap: wrap; /* Allow inputs to stack if necessary */
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
 }
 
-.contact-info-container p {
-  font-size: larger;
+.form-control {
+  width: 100%;
+  max-width: 250px; /* Limit width of each input box */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.contact-icon {
-  cursor: default;
+/* First Name specific styling */
+label[for="fname"] {
+  font-size: 1.2em; /* Increased font size */
+  font-weight: bold; /* Make First Name label bold */
+  color: #333333;
+  margin-bottom: 8px;
 }
 
-.email-icon {
-  height: 2.5rem;
+label {
+  font-size: 0.9em;
+  color: #333333;
+  margin-bottom: 8px;
+  text-align: center;
 }
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333333;
+  background-color: #f9f9f9;
+  max-width: 300px; /* Limit width of input fields */
+  text-align: center; /* Center text in input fields */
+}
+
+input:focus, textarea:focus {
+  border-color: #4A90E2;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Error messages */
+.invalid-feedback {
+  color: #e74c3c;
+  font-size: 0.85em;
+  display: none;
+  margin-top: 5px;
+  text-align: center;
+}
+
+input:invalid ~ .invalid-feedback,
+textarea:invalid ~ .invalid-feedback {
+  display: block;
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 250px; /* Set max-width to center the button */
+}
+
+.submit-btn button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #4A90E2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.submit-btn button:hover {
+  background-color: #357ABD;
+}
+
+/* Center all text */
+h1, p, label, .submit-btn, input, textarea {
+  text-align: center; /* Ensure everything is centered */
+}
+
 
 /* FOOTER SECTION */
 
